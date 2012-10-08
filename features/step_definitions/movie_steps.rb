@@ -48,3 +48,11 @@ Given /I (un)?check the following ratings: (.*)/ do |uncheck, rating_list|
     end
   end
 end
+
+
+Then /^the director of "(.*?)" should be "(.*?)"$/ do |title, director|
+  movie = Movie.find_by_title(title)
+  assert_equal movie.director, director
+end
+
+

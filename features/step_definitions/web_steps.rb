@@ -112,7 +112,6 @@ end
 
 Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
   regexp = Regexp.new(regexp)
-
   if page.respond_to? :should
     page.should have_xpath('//*', :text => regexp)
   else
@@ -252,3 +251,4 @@ end
 Then /^show me the page$/ do
   save_and_open_page
 end
+

@@ -17,7 +17,7 @@ end
 group :test do
   gem 'cucumber-rails'
   gem 'cucumber-rails-training-wheels'
-  gem 'rspec'
+  gem 'rspec-rails'
 end
 group :production do
 #  gem 'pg'
@@ -41,14 +41,11 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-gem 'haml''
-
+gem 'haml'
 
 group :test, :development do
-  gem 'cucumber-rails'
   gem 'cucumber-rails-training-wheels' # some pre-fabbed step definitions  
   gem 'database_cleaner' # to clear Cucumber's test database between runs
   gem 'capybara'         # lets Cucumber pretend to be a web browser
   gem 'launchy'          # a useful debugging aid for user stories
-  gem 'rspec-rails'
 end
