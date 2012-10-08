@@ -23,10 +23,11 @@ module NavigationHelpers
     
     when /^the details page for "(.*)"/
       movie_path(Movie.find_by_title($1))
-
-    when /^the Similar Movies page for "(.*)"$/
-      movie_path()
-      similar_movie_path(Movie.find_by_title($1))
+    
+    when /^the Similar Movies page for "(.*)"/
+      movie = Movie.find_by_title($1)
+      "/movies/#{movie.id}/similar"
+      #similar_movie_path(Movie.find_by_title($1))
 
    
     # Add more mappings here.
